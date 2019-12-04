@@ -49,7 +49,39 @@
          <a href="tel:+13865557499">(386) 555-7499</a>.
       </p>
 
-      <form action="http://www.example.com/redball/customer">
+      <form action="http://www.example.com/redball/customer" method="POST">
+         <div>
+            <label for="nameBox">Name*</label>
+            <input id="nameBox" name="custName" placeholder="First and Last Name" required>
+         </div>
+         <div>
+            <label for="phoneBox">Phone*</label>
+            <input id="phoneBox" name="custPhone" placeholder="(nnn) nnn-nnnn"
+            pattern="^\d{10}$|^(\(d{3}\)\s*)?\d{4}$" required>
+         </div>
+         <div>
+            <input type="radio" id="delivery" checked>
+            <label for="pickup">Pickup</label>
+         </div>
+
+         <fieldset id="deliveryInfo">
+            <legend>Delivery Options</legend>
+            <textarea id="addressBox" name="delAddress" placeholder="Enter delivery ddress">
+            </textarea>
+            <label for="delBox">Delivery Time(Leave Blank for earliest delivery)</label>
+            <input id="pickupBox" name="pickupTime" disabled type="time">
+         </fieldset>
+
+
+         <fieldset id="pickupInfo">
+            <legend>Pickup Options</legend>
+            <label for="pickupBox">Pickup Time (leave blank for earliest pickup)</label>
+            <input id="pickupBox" name="pickupTime" disabled type="time">
+         </fieldset>
+         <div>
+
+            <input type="submit" name="Begin Your Next Order" value="Begin Building Your Order">
+         </div>
 
       </form>
          

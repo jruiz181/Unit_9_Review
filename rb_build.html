@@ -19,6 +19,8 @@
    <title>Red Ball Pizza Build a Pizza</title>
    <link href="rb_base.css" rel="stylesheet" />
    <link href="rb_styles2.css" rel="stylesheet" />
+   <link rel="stylesheet" href="rb_forms2.css">
+   <script src="rb_formsubmit2.js"></script>
 </head>
 
 <body>
@@ -42,7 +44,120 @@
          by selecting from the ingredients below. You can divide your pizza
          into two regions to give your friends a wide choice of toppings
          and flavors.</p>
-         
+
+         <form action="http://www.example.com/redball/build" method="POST">
+            <div>
+               <label for="quantityBox">Quantity</label>
+               <input type="number" name="pizzQuantity" step="1" value="1" min="1" max="10">
+            </div>
+            <div>
+               <img src="rb_sizes.png" alt="pizza">
+               <label for="sizeBox">Pizza Size</label>
+               <input type="range" name="pizzaSize" min="10" max="16" step="2" value="14">
+            </div>
+            <div>
+               <label for="crustBox">Pizza Crust</label>
+               <select id="crustBox">
+                  <option value="Thin">Thin</option>
+                  <option value="Thick">Thick</option>
+                  <option value="Stuffes">Stuffed</option>
+                  <option value="Pan">Pan</option>
+               </select>
+            </div>
+            <div>
+               <input id="cheeseBox" type="checkbox" name="doubleCheese">
+               <label for="cheesBox">Double Cheese</label>
+               <input id="sauceBox" type="checkbox" name="doubleSauce">
+               <label for="sauceBox">Double Sauce</label>
+            </div>
+            <fieldset>
+               <legend>Meat Toppings</legend>
+               <div>
+                  <label>Location</label>
+                  <img src="rb_full.png">
+                  <img src="rb_left.png">
+                  <img src="rb_right.png" alt="">
+                  <img src="rb_none.png">
+               </div>
+               <div>
+                  <label>Pepperoni</label>
+                  <input name="pepperoni" value="full" type="radio">
+                  <input name="pepperoni" value="left" type="radio">
+                  <input name="pepperoni" value="right" type="radio">
+                  <input name="pepperoni" value="none" type="radio" checked>
+               </div>
+               <div>
+                  <label>Ham</label>
+                  <input name="ham" value="full" type="radio">
+                  <input name="ham" value="left" type="radio">
+                  <input name="ham" value="right" type="radio">
+                  <input name="ham" value="none" type="radio" checked>
+               </div>
+               <div>
+                  <label>Pork</label>
+                  <input name="pork" value="full" type="radio">
+                  <input name="pork" value="left" type="radio">
+                  <input name="pork" value="right" type="radio">
+                  <input name="pork" value="none" type="radio" checked>
+               </div>
+               <div>
+                  <label>Sausage</label>
+                  <input name="sausage" value="full" type="radio">
+                  <input name="sausage" value="left" type="radio">
+                  <input name="sausage" value="right" type="radio">
+                  <input name="sausage" value="none" type="radio" checked>
+               </div>
+               <div>
+                  <label>Chicken</label>
+                  <input name="chicken" value="full" type="radio">
+                  <input name="chicken" value="left" type="radio">
+                  <input name="chicken" value="right" type="radio">
+                  <input name="chicken" value="none" type="radio" checked>
+               </div>
+            </fieldset>
+
+            <fieldset>
+                  <legend>Vegetable Toppings</legend>
+                  <div>
+                     <label>Mushrooms</label>
+                     <input name="mushrooms" value="full" type="radio">
+                     <input name="mushrooms" value="left" type="radio">
+                     <input name="mushrooms" value="right" type="radio">
+                     <input name="mushrooms" value="none" type="radio" checked>
+                  </div>
+                  <div>
+                     <label>Peppers</label>
+                     <input name="peppers" value="full" type="radio">
+                     <input name="peppers" value="left" type="radio">
+                     <input name="peppers" value="right" type="radio">
+                     <input name="peppers" value="none" type="radio" checked>
+                  </div>
+                  <div>
+                     <label>Onions</label>
+                     <input name="onions" value="full" type="radio">
+                     <input name="onions" value="left" type="radio">
+                     <input name="onions" value="right" type="radio">
+                     <input name="onions" value="none" type="radio" checked>
+                  </div>
+                  <div>
+                     <label>Tomatoes</label>
+                     <input name="tomatoes" value="full" type="radio">
+                     <input name="tomatoes" value="left" type="radio">
+                     <input name="tomatoes" value="right" type="radio">
+                     <input name="tomatoes" value="none" type="radio" checked>
+                  </div>
+                  <div>
+                     <label>Jalapenos</label>
+                     <input name="jalapenos" value="full" type="radio">
+                     <input name="jalapenos" value="left" type="radio">
+                     <input name="jalapenos" value="right" type="radio">
+                     <input name="jalapenos" value="none" type="radio" checked>
+                  </div>
+               </fieldset>
+               <div>
+                  <input type="submit" value="Add to your order">
+               </div>
+         </form>         
    </section>
 
    <footer>
